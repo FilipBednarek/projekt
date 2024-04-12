@@ -9,22 +9,7 @@
     <title>Document</title>
 </head>
 <body>
-    <?php
-$conn=mysqli_connect('localhost','root','','porty_lotnicze') or die ("błąd");
-mysqli_set_charset($conn,"utf8");
-$query = "SELECT odloty.miasto FROM odloty;";
-$result=mysqli_query($conn,$query);
-$query2="SELECT odloty.miasto FROM odloty;";
-$result2=mysqli_query($conn,$query2);
-echo "podróżujemy do ";
-echo'<ul>';
-while($row=mysqli_fetch_row($result))
-{
-    echo '<li>'.$row[0].'</li>';
-}
-echo '</ul>';
-mysqli_close($conn);
-?>
+  
 <form action="rezerwacja.php" method="post">
 Imie: <input type="text" name='imie'><br>
 Nazwisko: <input type="text" name='nazwisko'><br>
